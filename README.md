@@ -1,7 +1,3 @@
-Claro! Aqui está um exemplo de README para o seu projeto:
-
----
-
 # Produtos Pepsico - Site Informativo
 
 ## Descrição
