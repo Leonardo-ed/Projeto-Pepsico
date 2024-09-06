@@ -44,7 +44,6 @@ h1 {
     font-weight: bold;
 }
 
-
 /* Seção Explicativa */
 .bg-dark-blue {
     color: #152a7d; /* Texto azul claro para contraste */
@@ -61,7 +60,7 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
 }
 
-.product-image {
+.product-section img {
     width: 100%; /* Garantir que a imagem se ajuste ao tamanho da coluna */
     border-radius: 8px; /* Bordas arredondadas para a imagem */
     object-fit: cover; /* Manter a proporção da imagem */
@@ -82,6 +81,20 @@ h1 {
 }
 
 /* Responsividade */
+@media (max-width: 767px) {
+    .product-section {
+        padding: 10px; /* Menos padding em dispositivos móveis */
+    }
+    
+    .product-description h2 {
+        font-size: 1.25rem; /* Tamanho de fonte menor para dispositivos móveis */
+    }
+
+    .product-description p {
+        font-size: 0.9rem; /* Tamanho de fonte menor para dispositivos móveis */
+    }
+}
+
 @media (min-width: 768px) {
     .product-section {
         margin-bottom: 30px; /* Espaço entre as seções */
@@ -109,5 +122,6 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
 
 
