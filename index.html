@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos Pepsico</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo CSS externo -->
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="text-center py-4">
+        <h3>"Transforme o ordinário em extraordinário com os produtos Pepsico - onde inovação e sabor se encontram".</h3>
+    </header>
+
+   <!-- Seção de Quiz -->
+<section class="quiz py-5 text-center">
+    <div class="container">
+        <h2>Descubra Qual Produto da Pepsico Combina Com Você!</h2>
+        <form id="quizForm">
+            <div class="mb-3">
+                <label for="question1" class="form-label">Qual sabor você prefere?</label>
+                <select id="question1" class="form-select" required>
+                    <option value="" disabled selected>Escolha uma opção</option>
+                    <option value="salty">Salgado</option>
+                    <option value="sweet">Doce</option>
+                    <option value="spicy">Picante</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="question2" class="form-label">Qual é a sua ocasião preferida para um lanche?</label>
+                <select id="question2" class="form-select" required>
+                    <option value="" disabled selected>Escolha uma opção</option>
+                    <option value="party">Festa</option>
+                    <option value="study">Estudo</option>
+                    <option value="sports">Esportes</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="question3" class="form-label">Você prefere um lanche prático ou um que ofereça mais energia?</label>
+                <select id="question3" class="form-select" required>
+                    <option value="" disabled selected>Escolha uma opção</option>
+                    <option value="practical">Prático</option>
+                    <option value="energetic">Energético</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Descubra o Seu Produto!</button>
+        </form>
+        <div id="result" class="mt-4"></div>
+    </div>
+</section>
+
+<script>
+    document.getElementById('quizForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Obtendo valores das respostas
+        const q1 = document.getElementById('question1').value;
+        const q2 = document.getElementById('question2').value;
+        const q3 = document.getElementById('question3').value;
+
+        // Determinando o produto com base nas respostas
+        let result = '';
+
+        if (q1 === 'salty' && q2 === 'party') {
+            result = 'Doritos - Para a festa perfeita com sabor marcante!';
+        } else if (q1 === 'sweet' && q2 === 'study') {
+            result = 'Toddynho - O doce sabor ideal para seus momentos de estudo!';
+        } else if (q1 === 'spicy' && q2 === 'sports') {
+            result = 'Gatorade - A bebida perfeita para reidratar após atividades intensas!';
+        } else if (q3 === 'practical') {
+            result = 'Fandangos - Um snack prático e saboroso para qualquer momento!';
+        } else if (q3 === 'energetic') {
+            result = 'Ruffles - Batatas chips crocantes para energia instantânea!';
+        } else {
+            result = 'Explore mais produtos da Pepsico e encontre o seu favorito!';
+        }
+
+        // Exibindo o resultado
+        document.getElementById('result').innerText = result;
+    });
+</script>
+
+   
+    <!-- Texto Explicativo -->
+<section class="intro py-5 text-center bg-dark-blue">
+    <div class="container">
+        <h2>Explore Nossos Produtos</h2>
+        <p>Descubra a variedade e qualidade dos produtos oferecidos pela Pepsico. Cada item é cuidadosamente selecionado para proporcionar a melhor experiência de sabor e satisfação. Navegue pelos nossos produtos e encontre suas opções favoritas!</p>
+    </div>
+</section>
+
+
+    <!-- Seção de Produtos -->
+    <div class="container">
+        <div class="row product-section align-items-center">
+    <div class="col-md-6">
+        <img src="imagens/doritos.png" alt="Produto 1" class="img-fluid">
+    </div>
+    <div class="col-md-6">
+        <div class="product-description">
+            <h2>"Com Doritos, o sabor é <i>nacho</i> comum!"</h2><br>
+            <p>O Doritos é uma escolha popular para quem gosta de snacks crocantes e saborosos. Feito de tortilhas de milho, ele é conhecido por seu sabor intenso e pela variedade de opções, como Nacho Cheese e Sweet Chili. Com sua textura crocante e temperos marcantes, Doritos é ideal para lanches rápidos, festas e momentos de descontração, sendo apreciado por consumidores no mundo todo. Além disso, é um produto amplamente disponível e parte de uma marca confiável.</p>
+            <a href="https://www.pepsico.com.br/pt-br/nossas-marcas/nossas-marcas" target="_blank">Acesse o site</a>
+        </div>
+    </div>
+</div>
+
+<div class="row product-section align-items-center">
+    <div class="col-md-6 order-md-2">
+        <img src="imagens/fandangos.png" alt="Produto 2" class="img-fluid">
+    </div>
+    <div class="col-md-6 order-md-1">
+        <div class="product-description">
+            <h2>"Fandangos: o snack que faz qualquer momento ficar mais <i>fandangoso</i>!"</h2><br>
+            <p>O Fandangos é um snack leve e crocante feito à base de milho, popular especialmente entre crianças. Ele é conhecido por sua textura macia e pelos sabores clássicos, como presunto e queijo. Além de ser saboroso, o Fandangos é uma opção de lanche prático para o dia a dia, comumente encontrado em diversos pontos de venda. É uma marca que, ao longo dos anos, conquistou um lugar especial nas prateleiras e no coração dos consumidores brasileiros.</p>
+            <a href="https://www.pepsico.com.br/pt-br/nossas-marcas/nossas-marcas" target="_blank">Acesse o site</a>
+        </div>
+    </div>
+</div>
+
+        <div class="row product-section align-items-center">
+            <div class="col-md-6">
+                <img src="imagens/gatorade.png" alt="Produto 1">
+            </div>
+            <div class="col-md-6">
+                <div class="product-description">
+                    <h2>"Com Gatorade, sua sede <i>desaparece de primeira</i>!"</h2><br>
+                    <p>O Gatorade da Pepsico é uma excelente escolha para quem busca hidratação e recuperação após atividades físicas intensas. Formulado cientificamente, ele repõe eletrólitos e fornece carboidratos para recuperar a energia. Com uma variedade de sabores, alta qualidade e fácil disponibilidade, é uma opção confiável para atletas e pessoas ativas que desejam otimizar seu desempenho.</p>
+                    <a href="https://www.pepsico.com.br/pt-br/nossas-marcas/nossas-marcas" target="_blank">Acesse o site</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row product-section align-items-center">
+            <div class="col-md-6 order-md-2">
+                <img src="imagens/huffles.png" alt="Produto 2">
+            </div>
+            <div class="col-md-6 order-md-1">
+                <div class="product-description">
+                    <h2>"Com Ruffles, o snack fica sempre <i>ondulado</i> de sabor!"</h2><br>
+                    <p>Ruffles é conhecida por suas batatas chips onduladas, crocantes e saborosas. Disponível em diversos sabores, como Original, Cebola & Salsa e Churrasco, ele se destaca pela textura única e temperos marcantes. É uma opção popular para lanches rápidos, eventos e momentos de descontração, sendo amplamente apreciada por consumidores de todas as idades. Com sua embalagem vibrante e a confiança de uma marca reconhecida mundialmente, Ruffles é um snack prático e saboroso.</p>
+                    <a href="https://www.pepsico.com.br/pt-br/nossas-marcas/nossas-marcas" target="_blank">Acesse o site</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row product-section align-items-center">
+            <div class="col-md-6">
+                <img src="imagens/pepsi.png" alt="Produto 1">
+            </div>
+            <div class="col-md-6">
+                <div class="product-description">
+                    <h2>"Com Pepsi, o sabor é sempre uma <i>pepsi</i>da de refrescância!"</h2><br>
+                    <p>Pepsi é uma das marcas de bebidas mais populares e reconhecidas no mundo. Com seu sabor marcante e refrescante, ela oferece uma alternativa clássica ao refrigerante de cola, sendo apreciada em diferentes ocasiões, desde refeições até momentos de lazer. Disponível em versões como regular, zero açúcar e outras edições especiais, a Pepsi é amplamente escolhida por seu equilíbrio entre doçura e gás. Além disso, a marca é conhecida por campanhas publicitárias inovadoras e seu envolvimento com a cultura pop.</p>
+                    <a href="https://www.pepsico.com.br/pt-br/nossas-marcas/nossas-marcas" target="_blank">Acesse o site</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row product-section align-items-center">
+            <div class="col-md-6 order-md-2">
+                <img src="imagens/toddynho.png" alt="Produto 2">
+            </div>
+            <div class="col-md-6 order-md-1">
+                <div class="product-description">
+                    <h2>"Toddynho: o sabor que faz seu dia <i>toddy</i> mais doce!"</h2><br>
+                    <p>O Toddynho é uma escolha prática e deliciosa para quem busca um lanche rápido e nutritivo. Com seu sabor chocolate irresistível e a cremosidade que agrada tanto crianças quanto adultos, ele é ideal para acompanhar o dia a dia, seja na escola, no trabalho ou em passeios. Além de ser uma opção de bebida rica em vitaminas e minerais, é convenientemente embalado em tetrabriks individuais, tornando-o perfeito para consumir a qualquer hora e lugar. Com a confiança de uma marca renomada, Toddynho combina sabor e qualidade em cada embalagem.</p>
+                    <a href="https://www.toddynho.com.br" target="_blank">Acesse o site</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Adicione mais produtos conforme necessário -->
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="text-center py-4">
+        <p>&copy; 2024 Pepsico - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
